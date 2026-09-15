@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projetos - Mãos que Transformam</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Mãos que Transformam</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Projetos Sociais</h2>
+
+            <p>
+                Conheça algumas das iniciativas desenvolvidas pela
+                nossa organização para apoiar a comunidade.
+            </p>
+        </section>
+
+        <!-- CARROSSEL -->
+        <section class="carrossel-section">
+
+            <div class="carrossel">
+
+                <button class="seta esquerda" id="anterior" aria-label="Projeto anterior">
+                    &#10094;
+                </button>
+
+                <div class="projeto-slide ativo">
+
+                    <img
+                        src="img/entrega-alimentos1.jpg"
+                        alt="Grupo de voluntários reunidos durante uma ação comunitária"
+                    >
+
+                    <div class="projeto-info">
+                        <h3>Ações Comunitárias</h3>
+
+                        <p>
+                            Realizamos ações comunitárias com voluntários
+                            para apoiar pessoas em situação de vulnerabilidade.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="projeto-slide">
+
+                    <img
+                        src="img/entrega-alimentos2.jpg"
+                        alt="Voluntários realizando entrega de alimentos para a comunidade"
+                    >
+
+                    <div class="projeto-info">
+                        <h3>Entrega de Alimentos</h3>
+
+                        <p>
+                            Organizamos campanhas de arrecadação e distribuição
+                            de alimentos para famílias que precisam de apoio.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="projeto-slide">
+
+                    <img
+                        src="img/entrega-alimentos3.jpg"
+                        alt="Voluntários distribuindo alimentos e água durante uma ação social"
+                    >
+
+                    <div class="projeto-info">
+                        <h3>Campanhas de Solidariedade</h3>
+
+                        <p>
+                            Nossas campanhas mobilizam voluntários e doadores
+                            para levar recursos essenciais à comunidade.
+                        </p>
+                    </div>
+
+                </div>
+
+                <button class="seta direita" id="proximo" aria-label="Próximo projeto">
+                    &#10095;
+                </button>
+
+            </div>
+
+            <div class="indicadores">
+
+                <button class="indicador ativo" aria-label="Ir para o projeto 1"></button>
+
+                <button class="indicador" aria-label="Ir para o projeto 2"></button>
+
+                <button class="indicador" aria-label="Ir para o projeto 3"></button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mãos que Transformam. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
