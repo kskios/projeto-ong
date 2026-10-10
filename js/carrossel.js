@@ -1,20 +1,24 @@
+import entregaAlimentos1 from "../img/entrega-alimentos1.webp";
+import entregaAlimentos2 from "../img/entrega-alimentos2.webp";
+import entregaAlimentos3 from "../img/entrega-alimentos3.webp";
+
 const projetos = [
     {
         titulo: "Ações Comunitárias",
         descricao: "Realizamos ações comunitárias com voluntários para apoiar pessoas em situação de vulnerabilidade.",
-        imagem: "../img/entrega-alimentos1.jpg",
+        imagem: entregaAlimentos1,
         textoAlternativo: "Grupo de voluntários reunidos durante uma ação comunitária"
     },
     {
         titulo: "Entrega de Alimentos",
         descricao: "Organizamos campanhas de arrecadação e distribuição de alimentos para famílias que precisam de apoio.",
-        imagem: "../img/entrega-alimentos2.jpg",
+        imagem: entregaAlimentos2,
         textoAlternativo: "Voluntários realizando entrega de alimentos para a comunidade"
     },
     {
         titulo: "Campanhas de Solidariedade",
         descricao: "Nossas campanhas mobilizam voluntários e doadores para levar recursos essenciais à comunidade.",
-        imagem: "../img/entrega-alimentos3.jpg",
+        imagem: entregaAlimentos3,
         textoAlternativo: "Voluntários distribuindo alimentos e água durante uma ação social"
     }
 ];

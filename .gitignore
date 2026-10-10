@@ -1,4 +1,18 @@
-.vscode/
-*.log
-Thumbs.db
-.DS_Store
+@"
+
+# Dependências Node.js
+node_modules/
+
+# Build de produção
+dist/
+
+# Arquivos de ambiente
+.env
+.env.*
+!.env.example
+
+# Saída de ferramentas
+coverage/
+"@ | Add-Content .gitignore
+# Imagens geradas pelo script
+img-otimizadas/
