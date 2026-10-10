@@ -1,0 +1,27 @@
+{
+  "name": "projeto-ong",
+  "version": "1.0.0",
+  "description": "Site institucional de uma organização não governamental (ONG), desenvolvido como projeto acadêmico. A aplicação tem como objetivo apresentar a missão da organização, divulgar projetos sociais e disponibilizar uma interface de cadastro, com foco em usabilidade, acessibilidade e organização do código.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kskios/projeto-ong.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kskios/projeto-ong/issues"
+  },
+  "homepage": "https://github.com/kskios/projeto-ong#readme",
+  "devDependencies": {
+    "sharp": "^0.35.5",
+    "vite": "^8.3.4"
+  }
+}

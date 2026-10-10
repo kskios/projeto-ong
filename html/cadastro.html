@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro - Mãos que Transformam</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous"
+    >
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container-fluid cabecalho-conteudo">
+            <a class="marca" href="index.html" aria-label="Mãos que Transformam — página inicial">
+                <span class="marca-simbolo" aria-hidden="true">M</span>
+                <span>Mãos que Transformam</span>
+            </a>
+
+            <button
+                class="botao-menu"
+                type="button"
+                aria-label="Abrir menu de navegação"
+                aria-expanded="false"
+                aria-controls="menu-principal"
+            >
+                <span aria-hidden="true">☰</span>
+            </button>
+
+            <nav id="menu-principal" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
+                </ul>
+            </nav>
+
+            <div class="acoes-cabecalho">
+                <button class="botao-tema" type="button" aria-label="Ativar tema escuro">
+                    <span class="icone-tema" aria-hidden="true">☾</span>
+                    <span class="rotulo-tema">Tema escuro</span>
+                </button>
+                <button class="botao-login" type="button" aria-haspopup="dialog" aria-controls="modal-login">
+                    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5Z"/></svg>
+                    <span>Entrar</span>
+                </button>
+            </div>
+            <span class="anuncio-acessivel" role="status" aria-live="polite"></span>
+        </div>
+    </header>
+
+    <dialog class="modal-login" id="modal-login" aria-labelledby="login-titulo">
+        <form class="conteudo-modal" id="login-form" method="dialog" autocomplete="off">
+            <button class="fechar-modal" type="button" aria-label="Fechar janela de login">&times;</button>
+            <h2 id="login-titulo">Acesso demonstrativo</h2>
+            <p>Este formulário é apenas uma demonstração. Nenhum dado será enviado ou salvo.</p>
+            <label for="login-email">E-mail</label>
+            <input id="login-email" name="email" type="email" autocomplete="username" required>
+            <label for="login-senha">Senha</label>
+            <input id="login-senha" name="senha" type="password" autocomplete="off" required>
+            <p class="mensagem-login" aria-live="polite"></p>
+            <button class="botao-primario" type="submit">Entrar</button>
+        </form>
+    </dialog>
+
+    <main id="app-main" tabindex="-1">
+
+        <section>
+            <h2>Cadastro de Voluntário</h2>
+
+            <p>
+                Preencha seus dados para fazer parte das ações
+                voluntárias da Mãos que Transformam.
+            </p>
+
+            <p class="aviso-privacidade">
+                Este projeto acadêmico salva somente nome, e-mail e telefone
+                neste navegador. Os dados locais não são um armazenamento
+                seguro de informações pessoais. CPF, data de nascimento e
+                endereço não são salvos.
+            </p>
+
+            <form id="cadastroForm" novalidate>
+
+                <fieldset>
+
+                    <legend>Dados pessoais</legend>
+
+                    <label for="nome">Nome completo:</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        required
+                        minlength="3"
+                        autocomplete="name"
+                    >
+
+                    <label for="dataNascimento">Data de nascimento:</label>
+                    <input
+                        type="text"
+                        id="dataNascimento"
+                        name="dataNascimento"
+                        placeholder="DD/MM/AAAA"
+                        maxlength="10"
+                        pattern="\d{2}/\d{2}/\d{4}"
+                        required
+                        inputmode="numeric"
+                        autocomplete="bday"
+                    >
+
+                    <label for="cpf">CPF:</label>
+                    <input
+                        type="text"
+                        id="cpf"
+                        name="cpf"
+                        placeholder="000.000.000-00"
+                        maxlength="14"
+                        pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                        required
+                        inputmode="numeric"
+                        autocomplete="off"
+                    >
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Contato</legend>
+
+                    <label for="email">E-mail:</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="seuemail@exemplo.com"
+                        required
+                        autocomplete="email"
+                    >
+
+                    <label for="telefone">Telefone:</label>
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        placeholder="(11) 99999-9999"
+                        maxlength="15"
+                        pattern="\(\d{2}\) \d{5}-\d{4}"
+                        required
+                        inputmode="numeric"
+                        autocomplete="tel"
+                    >
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Endereço</legend>
+
+                    <label for="endereco">Endereço:</label>
+                    <input
+                        type="text"
+                        id="endereco"
+                        name="endereco"
+                        placeholder="Rua, número e complemento"
+                        required
+                        autocomplete="street-address"
+                    >
+
+                    <label for="cep">CEP:</label>
+                    <input
+                        type="text"
+                        id="cep"
+                        name="cep"
+                        placeholder="00000-000"
+                        maxlength="9"
+                        pattern="\d{5}-\d{3}"
+                        required
+                        inputmode="numeric"
+                        autocomplete="postal-code"
+                    >
+
+                </fieldset>
+
+                <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+
+                <button type="submit">
+                    Enviar cadastro
+                </button>
+
+            </form>
+
+        </section>
+
+        <section aria-labelledby="cadastros-titulo">
+            <h2 id="cadastros-titulo">Cadastros salvos neste navegador</h2>
+            <p id="cadastros-feedback" class="cadastros-feedback" aria-live="polite"></p>
+            <ul id="lista-cadastros"></ul>
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            &copy; 2026 Mãos que Transformam.
+            Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+    <script type="module" src="../js/main.js"></script>
+
+</body>
+
+</html>
